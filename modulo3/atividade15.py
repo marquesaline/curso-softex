@@ -7,7 +7,6 @@ import time
 
 i = 10
 
-
 print("Começando a contagem regressiva")
 while (i != 0):    
     print(i)
