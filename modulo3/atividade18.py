@@ -15,7 +15,7 @@ while True:
                 anoNasc = input("Digite um ano válido: ")
                 ano = int(anoNasc)
     except ValueError:
-        print('Error: Digite um número')
+        print('Erro: Digite um número')
         continue
     else:
         idade = 2022 - ano
