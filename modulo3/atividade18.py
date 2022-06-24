@@ -5,20 +5,28 @@
 # Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o 
 # erro e continuará perguntando até que um valor correto seja preenchido.
 
-
-
-def idade(nome, anoNasc):
-    while anoNasc < 1922 or anoNasc > 2021:
-        print("Ano de nascimento não esperado. Digite um ano válido: ")
-        anoNasc = int(input())
+nomeCompleto = input("Digite seu nome completo: ")
+while True:
+    anoNasc = input("Digite o ano do nascimento: ")
+    try:
+        ano = int(anoNasc)
+        if(ano):
+            while(ano < 1922 or ano > 2021):
+                anoNasc = input("Digite um ano válido: ")
+                ano = int(anoNasc)
+    except ValueError:
+        print('Error: Digite um número')
+        continue
+    else:
+        idade = 2022 - ano
+        print("Nome completo: " + nomeCompleto)
+        print("Idade: " + str(idade))
+        break
     
-    idade = 2022 - anoNasc
-    print("Nome completo: " + nome)
-    print("Idade: " + str(idade))
+   
+   
 
-print("Digite seu nome completo: ")
-nomeCompleto = input()
-print("Digite o ano do seu nascimento: ")
-anoNasc = int(input())
+    
+    
 
-idade(nomeCompleto, anoNasc)
+
